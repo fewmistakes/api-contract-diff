@@ -1,0 +1,97 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Users API",
+    "version": "1.1.0"
+  },
+  "paths": {
+    "/users/{id}": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/UserId"
+        }
+      ],
+      "get": {
+        "responses": {
+          "200": {
+            "description": "User found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "region",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/users": {
+      "post": {
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "nickname": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "UserId": {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "type": "integer"
+        }
+      }
+    },
+    "schemas": {
+      "User": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

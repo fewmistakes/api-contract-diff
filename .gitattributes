@@ -1,0 +1,3 @@
+* text=auto eol=lf
+tests/corpus/*.json -text
+tests/corpus/*.yaml -text

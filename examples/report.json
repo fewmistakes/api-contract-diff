@@ -1,0 +1,32 @@
+{
+  "report_version": 1,
+  "status": "breaking",
+  "summary": {
+    "breaking": 2,
+    "compatible": 1,
+    "unknown": 0
+  },
+  "findings": [
+    {
+      "severity": "breaking",
+      "code": "parameter.added",
+      "operation": "GET /users/{id}",
+      "location": "#/paths/~1users~1{id}/get/parameters[query:region]",
+      "message": "Required parameter added: query region."
+    },
+    {
+      "severity": "breaking",
+      "code": "schema.incompatible",
+      "operation": "GET /users/{id}",
+      "location": "#/paths/~1users~1{id}/get/responses/200/content/application~1json/schema",
+      "message": "New response: $[\"email\"]: may be absent but must be present."
+    },
+    {
+      "severity": "compatible",
+      "code": "schema.compatible",
+      "operation": "POST /users",
+      "location": "#/paths/~1users/post/requestBody/content/application~1json/schema",
+      "message": "Request schema still accepts all previously valid values."
+    }
+  ]
+}

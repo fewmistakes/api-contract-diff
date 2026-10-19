@@ -1,0 +1,13 @@
+BREAKING   GET /users/{id}
+           Required parameter added: query region.
+           #/paths/~1users~1{id}/get/parameters[query:region] [parameter.added]
+
+BREAKING   GET /users/{id}
+           New response: $["email"]: may be absent but must be present.
+           #/paths/~1users~1{id}/get/responses/200/content/application~1json/schema [schema.incompatible]
+
+COMPATIBLE POST /users
+           Request schema still accepts all previously valid values.
+           #/paths/~1users/post/requestBody/content/application~1json/schema [schema.compatible]
+
+BREAKING: 2 breaking, 1 compatible, 0 unknown.

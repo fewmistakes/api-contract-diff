@@ -1,0 +1,32 @@
+[
+  {
+    "name": "swagger-petstore",
+    "file": "swagger-petstore.yaml",
+    "repository": "swagger-api/swagger-petstore",
+    "commit": "d57941e8fe959e508796b27469b1e8bba73392dc",
+    "url": "https://raw.githubusercontent.com/swagger-api/swagger-petstore/d57941e8fe959e508796b27469b1e8bba73392dc/src/main/resources/openapi.yaml",
+    "sha256": "e1a2480ffa440e44b981db5b038374214c532ffc92026fd51fb957c88bfbdd88",
+    "bytes": 23165,
+    "license": "Apache-2.0"
+  },
+  {
+    "name": "meilisearch",
+    "file": "meilisearch.json",
+    "repository": "meilisearch/open-api",
+    "commit": "0b0b0fdbb9d5821ec018a3db2777986a231eec37",
+    "url": "https://raw.githubusercontent.com/meilisearch/open-api/0b0b0fdbb9d5821ec018a3db2777986a231eec37/open-api.json",
+    "sha256": "83cbd10cea1ca75590dc31f1d2e40ef2b636297d47b39c9aefd813e41454cfd1",
+    "bytes": 431476,
+    "license": "MIT"
+  },
+  {
+    "name": "github",
+    "file": "github.json",
+    "repository": "github/rest-api-description",
+    "commit": "755ee33b4a81d51f6f07a902cce26cbec3b822f2",
+    "url": "https://raw.githubusercontent.com/github/rest-api-description/755ee33b4a81d51f6f07a902cce26cbec3b822f2/descriptions/api.github.com/api.github.com.json",
+    "sha256": "3177ad6a86ca04c57a9bef3fc24e28a339efb8eb040c6f950af3d3ed2fee7fa3",
+    "bytes": 13502446,
+    "license": "MIT"
+  }
+]

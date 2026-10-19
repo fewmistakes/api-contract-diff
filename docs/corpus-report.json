@@ -1,0 +1,58 @@
+{
+  "checker_version": "0.2.0",
+  "python": "3.12.14",
+  "platform": "Windows",
+  "repeat": 3,
+  "measurement": "Read and normalize one file, then compare that contract with itself.",
+  "sources": [
+    {
+      "name": "swagger-petstore",
+      "commit": "d57941e8fe959e508796b27469b1e8bba73392dc",
+      "sha256": "e1a2480ffa440e44b981db5b038374214c532ffc92026fd51fb957c88bfbdd88",
+      "bytes": 23165,
+      "operations": 19,
+      "operations_with_unsupported_features": 0,
+      "status": "compatible",
+      "summary": {
+        "breaking": 0,
+        "compatible": 0,
+        "unknown": 0
+      },
+      "diagnostics": {},
+      "median_seconds": 0.0527
+    },
+    {
+      "name": "meilisearch",
+      "commit": "0b0b0fdbb9d5821ec018a3db2777986a231eec37",
+      "sha256": "83cbd10cea1ca75590dc31f1d2e40ef2b636297d47b39c9aefd813e41454cfd1",
+      "bytes": 431476,
+      "status": "error",
+      "error": "meilisearch.json: #: expected OpenAPI 3.0.x; 3.1/3.2 and Swagger 2 are not supported",
+      "median_seconds": 0.0068
+    },
+    {
+      "name": "github",
+      "commit": "755ee33b4a81d51f6f07a902cce26cbec3b822f2",
+      "sha256": "3177ad6a86ca04c57a9bef3fc24e28a339efb8eb040c6f950af3d3ed2fee7fa3",
+      "bytes": 13502446,
+      "operations": 1242,
+      "operations_with_unsupported_features": 433,
+      "status": "inconclusive",
+      "summary": {
+        "breaking": 0,
+        "compatible": 0,
+        "unknown": 820
+      },
+      "diagnostics": {
+        "snapshot: Unsupported schema keywords: oneOf.": 549,
+        "snapshot: Unsupported schema keywords: anyOf.": 99,
+        "snapshot: Unsupported schema keywords: allOf.": 54,
+        "snapshot: Unsupported schema keywords: uniqueItems.": 103,
+        "snapshot: Unsupported schema keywords: discriminator, oneOf.": 7,
+        "snapshot: Unsupported schema keywords: minProperties.": 2,
+        "snapshot: Unsupported schema keywords: maxProperties.": 6
+      },
+      "median_seconds": 1.1449
+    }
+  ]
+}
